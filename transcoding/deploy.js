@@ -5,7 +5,7 @@ const { spawnSync } = require('child_process');
 const fs = require("fs");
 
 // Parameters
-let region = 'us-east-1';
+let region = 'us-east-2';
 let imageId = ``;
 let bucket = ``;
 let stack = ``;
@@ -72,7 +72,7 @@ function ensureEC2ImageId() {
                               '--region', `${region}`, 
                               '--query', '"Parameters[0].Value"']);
   if(!imageId.length) {
-    // Setting image ID optimized for us-east-1
+    // Setting image ID optimized for us-east-2
     // Mode info: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html
     imageId = 'ami-00f69adbdc780866c'; 
   }

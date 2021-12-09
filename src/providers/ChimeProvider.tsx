@@ -45,7 +45,7 @@ export class ChimeSdkWrapper implements DeviceChangeObserver {
   browserBehavior = new DefaultBrowserBehavior()
 
   supportedChimeRegions: RegionType[] = [
-    { label: 'United States (N. Virginia)', value: 'us-east-1' },
+    { label: 'United States (N. Virginia)', value: 'us-east-2' },
     { label: 'Japan (Tokyo)', value: 'ap-northeast-1' },
     { label: 'Singapore', value: 'ap-southeast-1' },
     { label: 'Australia (Sydney)', value: 'ap-southeast-2' },

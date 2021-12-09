@@ -55,7 +55,7 @@ If you want to restrict access to your broadcast output streams, you will need t
 
 ```
 Usage: deploy.sh [opts]
-  -r, --region                 Target region, default 'us-east-1'
+  -r, --region                 Target region, default 'us-east-2'
   -b, --s3-bucket              S3 bucket for deployment, REQUIRED
   -s, --stack-name             CloudFormation stack name, REQUIRED
   -p, --event-prefix           Event prefix, default 'LiveEvent'
@@ -79,22 +79,22 @@ To update the a deployment, simply update your project workspace with the newest
 ## Deployment Examples
 ### CloudFront deployment
 ```
-node ./deploy.js -r us-east-1 -b live-event-deployment-bucket -s live-event-deployment-stack
+node ./deploy.js -r us-east-2 -b live-event-deployment-bucket -s live-event-deployment-stack
 ```
 
 ### Domain Name deployment
 ```
-node ./deploy.js -r us-east-1 -b live-event-deployment-bucket -s live-event-deployment-stack -d example.com -c "arn:aws:acm:us-east-1:123456789012:certificate/{uuid} -p LiveEvent -t John Smith"
+node ./deploy.js -r us-east-2 -b live-event-deployment-bucket -s live-event-deployment-stack -d example.com -c "arn:aws:acm:us-east-2:123456789012:certificate/{uuid} -p LiveEvent -t John Smith"
 ```
 
 ### CloudFront deployment with private broadcast
 ```
 node ./deploy.js \
-  -r us-east-1 \
+  -r us-east-2 \
   -b live-event-deployment-bucket \
   -s live-event-deployment-stack \
   -K APKAAAAAAAAAAAAAAAAA \
-  -A "arn:aws:secretsmanager:us-east-1:999999999999:secret:cf-pkey-APKAAAAAAAAAAAAAAAAA-333333" \
+  -A "arn:aws:secretsmanager:us-east-2:999999999999:secret:cf-pkey-APKAAAAAAAAAAAAAAAAA-333333" \
   -D 7200
 ```
 #### Transcoder Serverless stack

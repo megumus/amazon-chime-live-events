@@ -240,7 +240,7 @@ Resources:
           # The code here is the same as the GET authorizer, but we need a separate authorizer
           # defined because we are having issue related to setting the policyDocument.Statement[0].Effect (see liveEventAuthorize.js)
           # with the particular methodArn, including the particular method GET vs PUT.
-          # If we set the methodArn to GET "arn:aws:execute-api:us-east-1:358614248599:hdp2b8cumj/Prod/GET/live-events/LiveEvent-nLFV"
+          # If we set the methodArn to GET "arn:aws:execute-api:us-east-2:358614248599:hdp2b8cumj/Prod/GET/live-events/LiveEvent-nLFV"
           # then subsequent PUT requests will be blocked with 403.
           # Docs blame caching for this, but we do not have caching enabled, so we are not sure why we still face issues.
           # Relevant doc: https://forums.aws.amazon.com/thread.jspa?threadID=283485
@@ -2051,7 +2051,7 @@ Resources:
     Type: AWS::Serverless::Application
     Properties:
       Location:
-        ApplicationId: arn:aws:serverlessrepo:us-east-1:375983427419:applications/deploy-to-s3
+        ApplicationId: arn:aws:serverlessrepo:us-east-2:375983427419:applications/deploy-to-s3
         SemanticVersion: 2.4.2
   SiteSource:
     Type: AWS::Serverless::Function

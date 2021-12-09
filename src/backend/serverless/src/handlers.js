@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 
 const ddb = new AWS.DynamoDB();
-const chime = new AWS.Chime({ region: 'us-east-1' });
+const chime = new AWS.Chime({ region: 'us-east-2' });
 const { LIVE_EVENTS_TABLE } = process.env;
 
 chime.endpoint = new AWS.Endpoint(
@@ -150,7 +150,7 @@ exports.createMeeting = async (event, context, callback) => {
 
   const externalAttendeeId = event && event.headers['attendeeid'];
   const title = event.queryStringParameters.title;
-  const region = event.queryStringParameters.region || 'us-east-1';
+  const region = event.queryStringParameters.region || 'us-east-2';
 
   const attendee = await getAttendeeObject(externalAttendeeId);
   const isAttendee =
@@ -213,7 +213,7 @@ exports.join = async (event, context, callback) => {
   const externalAttendeeId = event && event.headers['attendeeid'];
   const title = event.queryStringParameters.title;
   const name = event.queryStringParameters.name;
-  const region = event.queryStringParameters.region || 'us-east-1';
+  const region = event.queryStringParameters.region || 'us-east-2';
 
   const attendee = await getAttendeeObject(externalAttendeeId);
   const isAttendee =

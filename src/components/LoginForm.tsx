@@ -87,7 +87,7 @@ const LoginForm: React.FC<Props> = ({ requireKey = true, title }) => {
 
   useEffect(() => {
     if (credentials.isAuthenticated) {
-      history.push(`${routes.DRESSING_ROOM}?region=us-east-1`);
+      history.push(`${routes.DRESSING_ROOM}?region=us-east-2`);
     } else if (accessKey) {
       setButtonEnabled(true);
       setErrorMessage(translate('LoginForm.authenticationFailed'));

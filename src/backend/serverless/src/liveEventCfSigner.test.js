@@ -27,7 +27,7 @@ const privateKeyPem = privateKey.export({
   format: 'pem'
 });
 const keyId = 'APKAAAAAAAAAAAAAAAAA';
-const secretARN = 'arn:aws:secretsmanager:us-east-1:999999999999:secret:cf-pkey-APKAAAAAAAAAAAAAAAAA-333333';
+const secretARN = 'arn:aws:secretsmanager:us-east-2:999999999999:secret:cf-pkey-APKAAAAAAAAAAAAAAAAA-333333';
 const domain = 'd111111abcdef8.cloudfront.net';
 const path = '/out/v1/*';
 const activeFromUtc = Date.now() / 1000;

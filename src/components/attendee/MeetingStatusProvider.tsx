@@ -67,7 +67,7 @@ export default function MeetingStatusProvider(props: Props): JSX.Element {
         await chime.createRoom(
           meetingId,
           attendeeName,
-          query.get('region') || 'us-east-1'
+          query.get('region') || 'us-east-2'
         );
 
         setMeetingStatus({

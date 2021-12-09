@@ -82,7 +82,7 @@ const DressingRoom = (props: Props) => {
 
   useEffect(() => {
     if (straightToMeeting && credentials.isAuthenticated) {
-      history.push(`${routes.MEETING}?region=us-east-1`);
+      history.push(`${routes.MEETING}?region=us-east-2`);
     }
   }, [straightToMeeting, credentials.isAuthenticated]);
 

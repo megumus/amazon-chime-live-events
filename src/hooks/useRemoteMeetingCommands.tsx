@@ -72,7 +72,7 @@ const useRemoteMeetingCommands = () => {
             `Received moderator message to transfer meetings: ${meetingId}`
           );
           localVideoApi.stopLocalVideoTile();
-          const url = `${routes.MEETING}?title=${meetingId}&name=${attendeeName}&region=us-east-1&liveEvent=true`;
+          const url = `${routes.MEETING}?title=${meetingId}&name=${attendeeName}&region=us-east-2&liveEvent=true`;
           history.replace(url);
           break;
         case MessageType.KICK:

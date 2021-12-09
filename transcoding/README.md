@@ -22,11 +22,11 @@ This contains resources for building an application that broadcast media from an
    
     Here is an example:
     ```
-    node ./deploy.js -b broadcast-lambda-cf-deploy-bucket -s broadcast-lambda-cf-stack -n broadcast-lambda -r us-east-1
+    node ./deploy.js -b broadcast-lambda-cf-deploy-bucket -s broadcast-lambda-cf-stack -n broadcast-lambda -r us-east-2
     ```
 
 3. Once the deployment completes, it shows the ARN of Lambda function created. Go to AWS console and find the function.
- The arn of the broadcast lambda function will look something like this: `arn:aws:lambda:us-east-1:000087643245:function:broadcast-lambda-cf-stack-lambda`. This function will be used in the next section to start/stop the ECS task.
+ The arn of the broadcast lambda function will look something like this: `arn:aws:lambda:us-east-2:000087643245:function:broadcast-lambda-cf-stack-lambda`. This function will be used in the next section to start/stop the ECS task.
     
 ## Running the transcoding task in ECS
 Please refer to the [running transcoding for broadcast](../README.md/#running-transcoding-for-broadcast) section in the main README.

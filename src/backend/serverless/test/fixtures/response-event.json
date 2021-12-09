@@ -61,7 +61,7 @@
         "host": [
             {
                 "key": "Host",
-                "value": "rnewman-live-event-stack-3-cf.s3.us-east-1.amazonaws.com"
+                "value": "rnewman-live-event-stack-3-cf.s3.us-east-2.amazonaws.com"
             }
         ]
     },
@@ -70,7 +70,7 @@
         "s3": {
             "authMethod": "none",
             "customHeaders": {},
-            "domainName": "rnewman-live-event-stack-3-cf.s3.us-east-1.amazonaws.com",
+            "domainName": "rnewman-live-event-stack-3-cf.s3.us-east-2.amazonaws.com",
             "path": ""
         }
     },

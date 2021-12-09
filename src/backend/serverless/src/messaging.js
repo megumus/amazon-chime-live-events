@@ -9,7 +9,7 @@ const {
 } = require('./eventAttendeesDao');
 const AWS = require('aws-sdk');
 const ddb = new AWS.DynamoDB({ region: process.env.AWS_REGION });
-const chime = new AWS.Chime({ region: 'us-east-1' });
+const chime = new AWS.Chime({ region: 'us-east-2' });
 chime.endpoint = new AWS.Endpoint(
   'https://service.chime.aws.amazon.com/console'
 );

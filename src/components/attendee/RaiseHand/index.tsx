@@ -136,7 +136,7 @@ const RaiseHand = () => {
 
   const handleAccept = () => {
     messagingService?.notifyModerator(AttendeeMeetingProgress.INVITE_ACCEPTED);
-    const url = `${routes.DRESSING_ROOM}?title=${meetingId}&name=${attendeeName}&region=us-east-1`;
+    const url = `${routes.DRESSING_ROOM}?title=${meetingId}&name=${attendeeName}&region=us-east-2`;
     history.replace(url);
   };
 

@@ -108,7 +108,7 @@ export default function OneOnOneMeetingStatusProvider(props: Props) {
 
     const start = async () => {
       try {
-        await chime?.createRoom(oneOnOneMeetingId, 'Moderator', 'us-east-1');
+        await chime?.createRoom(oneOnOneMeetingId, 'Moderator', 'us-east-2');
 
         setMeetingStatus({
           meetingStatus: MeetingStatus.Succeeded,

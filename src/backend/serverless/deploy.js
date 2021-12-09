@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Deploy parameters
-let region = 'us-east-1';
+let region = 'us-east-2';
 let bucket = ``;
 let stack = ``;
 

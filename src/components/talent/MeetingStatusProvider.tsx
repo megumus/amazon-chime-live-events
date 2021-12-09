@@ -62,7 +62,7 @@ export default function MeetingStatusProvider(props: Props) {
         await chime.createRoom(
           meetingId,
           verifiedParticipant.attendeeName,
-          query.get('region') || 'us-east-1'
+          query.get('region') || 'us-east-2'
         );
 
         setMeetingStatus(MeetingStatus.Succeeded);
